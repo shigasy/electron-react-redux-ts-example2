@@ -1,12 +1,12 @@
 import { combineReducers, createStore } from 'redux';
 import { InterfaceState } from './states/InterfaceState';
-import userReducer from './reducers/UserReducer';
+import taskReducer from './reducers/TaskReducer';
 
 // reducerで帰ってくる新しい値をstateに保存する。束ねて一元管理
 // 本来はシングルトンオブジェクトだが、規模によっては複数に分けて管理したいから。
 // 分けたreducerを束ねる
 const combineReducer = combineReducers<InterfaceState>({
-  user: userReducer,
+  taskList: taskReducer,
   // reducerが増えたら追加
 });
 

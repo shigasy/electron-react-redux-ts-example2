@@ -1,8 +1,5 @@
-// redux stateのためのinterface
-
-import InterfaceUser from './InterfaceUser';
+import { InterfaceTaskList } from './InterfaceTask';
 
 export interface InterfaceState {
-  user: InterfaceUser;
-  // stateが増えたら追加
+  taskList: InterfaceTaskList;
 }
