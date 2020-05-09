@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/aria-role */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import moment from 'moment';
 import React, { ChangeEvent, useCallback, useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+// import DatePicker from 'react-datepicker';
+// import 'react-datepicker/dist/react-datepicker.css';
 import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
 import { addTaskAction } from '../actions/TaskActions';
@@ -81,14 +84,16 @@ const AddTask: React.FC = () => {
       </TaskNameBox>
       <DeadlineBox>
         <label htmlFor="deadline">
-          dead line
-          <DatePicker
+          <div role="" onClick={() => onChangeDeadLine(new Date())}>
+            hoge
+          </div>
+          {/* <DatePicker
             id="deadline"
             selected={deadline}
             showTimeSelect
             dateFormat="yyyy-MM-dd HH:mm"
             onChange={onChangeDeadLine}
-          />
+          /> */}
         </label>
       </DeadlineBox>
       <AddButton onClick={onClickAddButton}>+</AddButton>

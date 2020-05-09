@@ -6,7 +6,7 @@ import baseStyled, {
 } from 'styled-components';
 
 // global
-export const GlobalStyled = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-family: 'Meiryo UI';

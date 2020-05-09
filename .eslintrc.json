@@ -57,13 +57,15 @@
     ],
     // single module exportをdefaultをしなくてもOK
     "import/prefer-default-export": "off",
-    // labelのforなくてもOK htmlForでエラーが出るため
-    "jsx-a11y/label-has-for": [ 2, {
-      "components": [ "Label" ],
-      "required": {
-          "some": [ "nesting", "id" ]
-      },
-      "allowChildren": false,
-  }]
+    // htmlForでエラーが出るためカスタムラベルOK
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": ["CustomInputLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["CustomInput"],
+        "depth": 3
+      }
+    ]
   }
 }
