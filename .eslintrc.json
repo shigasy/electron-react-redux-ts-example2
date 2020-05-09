@@ -56,6 +56,14 @@
       }
     ],
     // single module exportをdefaultをしなくてもOK
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    // labelのforなくてもOK htmlForでエラーが出るため
+    "jsx-a11y/label-has-for": [ 2, {
+      "components": [ "Label" ],
+      "required": {
+          "some": [ "nesting", "id" ]
+      },
+      "allowChildren": false,
+  }]
   }
 }
