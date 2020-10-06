@@ -12,7 +12,7 @@
     "build:render": "webpack"
   },
   "dependencies": {
-    "electron": "^8.2.5",
+    "electron": "^8.5.2",
     "html-webpack-plugin": "^4.3.0",
     "moment": "^2.25.3",
     "react": "^16.13.1",
